@@ -1,38 +1,115 @@
-body {
-  font-family: Arial, sans-serif;
+/* Reset some default styles */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
+/* Body and font setup */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header styling */
 header {
-  background: #333;
-  color: white;
-  padding: 1em;
+  background-color: #28a745;
+  color: #fff;
+  padding: 1rem 2rem;
   text-align: center;
 }
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
 nav a {
-  color: white;
-  margin: 0 1em;
+  color: #fff;
   text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
+
+nav a:hover {
+  color: #ffc107;
+}
+
+/* Product grid styling */
 main {
-  padding: 2em;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
+
 .product-grid {
-  display: flex;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
 }
+
+/* Individual product card */
 .product-card {
-  border: 1px solid #ccc;
-  padding: 1em;
-  width: 200px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.2s ease-in-out;
 }
-.product-detail {
-  display: flex;
-  gap: 2em;
+
+.product-card:hover {
+  transform: translateY(-5px);
 }
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  width: 300px;
+
+.product-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.product-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.product-card a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #28a745;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.product-card a:hover {
+  background-color: #218838;
+}
+
+/* Footer placeholder */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #e9ecef;
+  margin-top: 3rem;
 }
